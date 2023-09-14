@@ -1,0 +1,130 @@
+@import url(/src/App.css);
+
+.statusPanel {
+    display: grid;
+    grid-template-areas:
+        'n s d e m'
+    ;
+    gap: .5rem;
+    align-items: center;
+    background-color: var(--light-pri);
+}
+
+.darkStatusPanel {
+    background-color: var(--dark-sec);
+    color: var(--light-pri);
+}
+
+.statusPanel>span {
+    font-weight: var(--fw-600);
+    font-size: 1.5rem;
+    grid-area: n;
+}
+
+
+.statusPanel> :nth-child(2) {
+    grid-area: s;
+}
+
+.editBtn,
+.deleteBtn,
+.changeStatusBtn {
+    all: unset;
+
+    padding: .6rem;
+    border-radius: 1rem;
+
+    font-weight: var(--fw-600);
+
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.statusPanel>button:hover {
+    opacity: .5;
+}
+
+
+
+
+.editBtn {
+    background-color: var(--dark-pri);
+    grid-area: e;
+}
+
+
+.deleteBtn {
+    background-color: rgb(215, 8, 8);
+    grid-area: d;
+}
+
+
+.changeStatusBtn {
+    background-color: rgb(77, 77, 232);
+    grid-area: m;
+}
+
+
+
+
+
+
+.deletePopUp{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.deletePopUp::backdrop {
+    background: rgba(26, 25, 25, 0.738);
+}
+
+
+
+.deletePopUp>* {
+    margin: 2rem 0;
+}
+
+.deletePopUp button {
+    all: unset;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    margin: 0 2rem;
+    border-radius: 5px;
+    border: 2px solid rgba(128, 128, 128, 0.407);
+    background-color: var(--dark-pri);
+
+    font-weight: var(--fw-600);
+    font-size: .9rem;
+    color: white;
+}
+
+
+.deletePopUp button:hover {
+    color: black;
+    background-color: white;
+}
+
+
+
+
+
+
+
+@media (width < 650px) {
+
+    .statusPanel {
+        grid-template-areas:
+            'n . s'
+            'd e m '
+        ;
+    }
+
+    .changeStatusBtn {
+        padding: .7rem;
+    }
+
+}

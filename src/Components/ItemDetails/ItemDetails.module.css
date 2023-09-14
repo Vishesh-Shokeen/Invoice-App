@@ -1,0 +1,30 @@
+@import url(/src/App.css);
+
+
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(13, 13, 13);
+    color: white;
+}
+
+
+.items > div{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    text-align: center;
+    
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: var(--fw-600);
+}
+
+
+
+.items > div:last-child{
+    background-color: var(--dark-sec);
+    padding: 2rem 0;
+    border-radius: 5px;
+}

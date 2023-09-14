@@ -1,0 +1,84 @@
+@import url(/src/App.css);
+
+.body {
+    display: grid;
+    grid-template-areas:
+        'id id from from'
+        'date date to to'
+        'email email . .'
+    ;
+    gap: .3rem;
+    background-color: var(--light-pri);
+    font-weight: var(--fw-600);
+}
+
+.darkBody {
+    background-color: var(--dark-sec);
+    color: var(--light-pri);
+}
+
+
+.body>div {
+    padding: 1.5rem 0;
+}
+
+.body p:first-child {
+    color: rgb(245, 101, 120);
+}
+
+
+.id {
+    grid-area: id;
+}
+
+
+.date {
+    grid-area: date;
+}
+
+
+.date > :nth-child(2){
+    margin-bottom: .5rem;
+}
+
+
+.email {
+    grid-area: email;
+}
+
+
+.billFrom {
+    grid-area: from;
+    display: grid;
+    grid-template-areas:
+        'city street'
+        'country post'
+    ;
+    gap: .6rem;
+}
+
+
+
+.billTo {
+    grid-area: to;
+    display: grid;
+    grid-template-areas:
+        '. name'
+        'city street'
+        'country post'
+    ;
+}
+
+
+@media (width < 650px) {
+
+    .body {
+        grid-template-areas:
+            'id id id id'
+            ' to to to to'
+            'email email date date'
+            'from from from from'
+        ;
+    }
+
+}

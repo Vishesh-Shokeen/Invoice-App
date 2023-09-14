@@ -1,0 +1,343 @@
+@import url(/src/App.css);
+
+
+.dialogContainer {
+    min-height: 100vh;
+    position: absolute;
+    padding: 0 0 0 3rem;
+    width: min(100%, 600px);
+    overflow: hidden;
+
+    background-color: var(--light-sec);
+    color: black;
+
+
+    transform: translate(-1000px);
+    transition: transform 300ms ease-in-out;
+
+}
+
+
+.slide {
+    transform: translate(4rem);
+}
+
+
+.darkDialog {
+    background-color: var(--dark-pri);
+    color: white;
+}
+
+
+
+
+
+
+
+.dialogContainer>h1 {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.421);
+}
+
+
+
+
+.buttonsDiv {
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center;
+
+    padding: 1rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.421);
+}
+
+
+
+
+.buttonsDiv > button {
+    all: unset;
+    padding: 1rem;
+    margin: 0 .2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.407);
+
+    font-weight: var(--fw-600);
+    font-size: .9rem;
+
+    color: white;
+    transition: background-color 200ms ease-in;
+}
+
+
+.buttonsDiv>button:first-child {
+    background-color: var(--dark-pri);
+}
+
+.buttonsDiv>button:first-child:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+.buttonsDiv>button:nth-child(2) {
+    background-color: var(--dark-sec);
+
+}
+
+.buttonsDiv>button:nth-child(2):hover {
+    background-color: var(--dark-pri);
+}
+
+
+
+
+
+
+.buttonsDiv>button:last-child {
+    background-color: rgb(124, 93, 250);
+}
+
+.buttonsDiv>button:last-child:hover {
+    background-color: rgb(86, 49, 234);
+}
+
+
+
+.addItemBtn{
+    all: unset;
+    padding: .5rem;
+    margin: 0 .2rem;
+    border-radius: 5px;
+    border: 2px solid rgba(128, 128, 128, 0.407);
+    background-color: var(--dark-sec);
+
+    font-weight: var(--fw-600);
+    font-size: .9rem;
+
+    color: white;
+}
+
+
+
+
+
+.window {
+    padding: 2rem;
+    overflow: scroll;
+    max-height: 75vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+.window p {
+    color: rgb(60, 85, 193);
+    font-weight: var(--fw-600);
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.window>div {
+    color: var(--gray-text);
+    font-weight: var(--fw-200);
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.window label {
+    padding: 0.5rem 0.21rem;
+}
+
+
+label {
+    font-weight: var(--fw-600);
+}
+
+
+
+
+
+.input,
+.window select {
+    all: unset;
+    color: black;
+    background-color: var(--light-pri);
+
+    width: 100%;
+    padding: .8rem 0;
+    margin: .5rem 0;
+
+    border: 1px solid rgba(80, 79, 79, 0.603);
+    border-radius: 5px;
+
+    font-weight: var(--fw-600);
+    font-size: 1.1rem;
+}
+
+.darkInput {
+    color: white;
+    background-color: var(--dark-sec);
+}
+
+
+
+
+
+
+.BillFrom,
+.BillTo,
+.other {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+
+.BillFrom>label:nth-child(1),
+.BillTo>label:nth-child(1),
+.BillTo>label:nth-child(2),
+.BillTo>label:nth-child(3),
+.other>label:nth-child(3) {
+    grid-column: 1/-1;
+}
+
+
+
+.BillFrom>label:nth-child(2),
+.BillTo>label:nth-child(4),
+.other>label:nth-child(1) {
+    grid-column: 1/2;
+}
+
+
+
+.BillFrom>label:nth-child(3),
+.BillTo>label:nth-child(5),
+.other>label:nth-child(2) {
+    grid-column: 2/3;
+}
+
+
+
+.BillFrom>label:nth-child(4),
+.BillTo>label:nth-child(6) {
+    grid-column: 3/4;
+}
+
+
+
+
+
+/**************/
+.itemInputWrapper {
+    padding: .5rem;
+    margin: .5rem 0;
+}
+
+.itemSlot {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-auto-columns: 23%;
+}
+
+
+
+.itemTotal{
+    display: grid;
+}
+
+
+.itemTotal >span{
+    margin: 1.3rem 0;
+}
+
+.itemSlot > span{
+    max-width: min-content;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (width < 650px) {
+
+    .dialogContainer {
+        padding: 0;
+        top: 4rem;
+        bottom: 0;
+        min-height: 90vh;
+    }
+
+
+    .slide {
+        transform: translate(0px);
+    }
+
+    .window {
+        max-height: 65vh;
+        padding: 1rem;
+    }
+
+
+    .other {
+        grid-template-columns: unset;
+    }
+
+    .other>label:nth-child(1) {
+        grid-column: unset;
+    }
+
+    .other>label:nth-child(2) {
+        grid-column: unset;
+    }
+
+    .other>label:nth-child(3) {
+        grid-column: unset;
+    }
+
+
+
+    .itemSlot> :nth-child(1) {
+        grid-column: 1/5;
+    }
+
+    .itemSlot> :nth-child(2) {
+        grid-row: 2;
+    }
+
+    .itemSlot> :nth-child(3) {
+        grid-row: 2;
+    }
+
+    .itemSlot> :nth-child(4) {
+        grid-row: 2;
+    }
+
+    .itemSlot> :nth-child(5) {
+        grid-row: 2;
+        grid-column: 5;
+    }
+
+
+
+
+
+}

@@ -1,0 +1,84 @@
+:root {
+
+  --light-pri: #f1e9e9;
+  --light-sec: rgb(250, 245, 245);
+  --dark-pri: rgb(20, 22, 37);
+  --dark-sec: rgb(30, 33, 57);
+  --gray-text: rgb(148, 144, 144);
+
+
+  --pending: rgb(255, 143, 0);
+  --paid: rgb(12, 94, 66);
+
+  --ff: 'Montserrat', sans-serif;
+
+  --fw-200: 200;
+  --fw-400: 400;
+  --fw-600: 600;
+}
+
+
+
+* {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  min-height: 100vh;
+}
+
+/***********/
+body {
+  font-family: var(--ff);
+  font-size: 16px;
+
+  background-color: var(--light-sec);
+}
+
+
+.darkMode {
+  background-color: var(--dark-pri);
+}
+
+
+
+
+/************/
+/* status */
+/*************/
+
+.Pending {
+  background-color: rgba(247, 190, 116, 0.914);
+  color: var(--pending);
+}
+
+.Pending>.span {
+  background-color: var(--pending);
+}
+
+
+.Draft {
+  background-color: rgba(195, 190, 190, 0.878);
+  color: var(--gray-text);
+}
+
+.Draft>span {
+  background-color: var(--gray-text);
+}
+
+.Paid {
+  background-color: rgba(175, 243, 178, 0.841);
+  color: var(--paid);
+}
+
+.Paid>span {
+  background-color: var(--paid);
+}

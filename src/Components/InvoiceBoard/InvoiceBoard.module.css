@@ -1,0 +1,166 @@
+@import url(/src/App.css);
+
+
+
+.invoiceBoard {
+    padding: 1rem;
+    overflow: scroll;
+    max-height: 100vh;
+    background-color: var(--light-sec);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out;
+    transition-property: color, background-color;
+}
+
+
+.invoiceBoard>* {
+    transition: 1s ease-in-out;
+    transition-property: color, background-color;
+}
+
+.darkInvoiceBoard {
+    background-color: var(--dark-pri);
+    color: var(--light-sec);
+}
+
+
+
+
+.manageInvoices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: min(90%, 700px);
+    padding: 1rem 0;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+
+
+.manageInvoices select {
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: .9rem;
+    margin: 0 1rem;
+}
+
+.manageInvoices select>option {
+    background-color: rgb(154, 148, 148);
+}
+
+.manageInvoices button {
+    all: unset;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: var(--fw-600);
+    font-size: .9rem;
+    background-color: rgb(124, 93, 250);
+}
+
+
+
+
+.stripInvoice {
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--light-pri);
+    width: min(100%, 700px);
+    padding: 1.2rem;
+    margin: .5rem 0;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 20%;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 1rem;
+    outline: 1px solid var(--light-sec);
+    transition: 0.4s ease;
+    transition-property: scale, outline;
+}
+
+.darkStripInvoice {
+    background-color: var(--dark-sec);
+    outline: 1px solid var(--dark-sec);
+}
+
+
+
+.stripInvoice:hover {
+    outline: 1px solid rgb(2, 63, 246);
+    scale: 1.0125;
+}
+
+
+
+.invoiceClient,
+.invoiceID,
+.invoiceTotal {
+    font-weight: var(--fw-600);
+}
+
+
+
+.emptyFolder{
+    margin: auto auto;
+    padding: 4rem;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: rgb(163, 175, 195);
+    color: rgb(237, 232, 232);
+}
+
+
+@media (width < 650px) {
+
+    .invoiceBoard {
+        max-height: 90vh;
+
+    }
+
+    .manageInvoices {
+        flex-direction: column;
+        text-align: center;
+        gap: .5rem;
+    }
+
+
+    .stripInvoice {
+        grid-auto-columns: unset;
+        grid-template-areas:
+            'client total'
+            'due status'
+        ;
+    }
+
+    .stripInvoice>span {
+        margin: 1rem;
+    }
+
+    .invoiceID {
+        display: none;
+    }
+
+    .invoiceClient {
+        grid-area: client;
+    }
+
+    .invoiceTotal {
+        grid-area: total;
+    }
+
+    .invoiceDue {
+        grid-area: due;
+    }
+}
