@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import styles from './invoice.module.css'
+import styles from './Invoice.module.css'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import context from '../../ContextAPI/ContextAPI'
 
