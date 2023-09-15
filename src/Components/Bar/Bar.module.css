@@ -27,11 +27,12 @@
 .logoWrapper {
     border-radius: 0 25px 25px 0;
     margin-bottom: auto;
+    padding: 1rem;
 }
 
 
 .logoWrapper>img {
-    width: 8rem;
+    width: 4rem;
 }
 
 

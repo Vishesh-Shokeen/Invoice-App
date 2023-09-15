@@ -13,7 +13,8 @@ export default function Skills({ invoice } = props) {
         <p>{item.price}</p>
     </div>)
 
-    // const totalPrice = invoice.Item.reduce((acc , item) => acc  += item.price * item.qty,0)
+    const totalPrice = invoice.Item.reduce((acc , item) => acc  += item.price * item.qty,0)
+    console.log(totalPrice)
 
     return (
         <div
@@ -30,7 +31,7 @@ export default function Skills({ invoice } = props) {
 
             <div>
                 <p>Amount Due</p>
-                {/* <p>{totalPrice}</p> */}
+                <p> &#x20B9; {totalPrice ? totalPrice : null}</p>
             </div>
 
         </div>

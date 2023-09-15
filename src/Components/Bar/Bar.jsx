@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import styles from './Bar.module.css'
 
-import WhiteLogo from '/WhiteLogo.svg'
+import Lotus from '/Logo.svg'
+
 import sunIcon from '/sunIcon.svg'
 import moonIcon from '/moonIcon.svg'
 import avatar from '/avatar.jpg'
@@ -23,7 +24,7 @@ export default function Bar() {
 
             <div className={logoWrapper}>
                 <img
-                   src={WhiteLogo}
+                    src={Lotus}
                     alt="logo" />
             </div>
 
@@ -35,8 +36,8 @@ export default function Bar() {
 
             <img
                 src={avatar}
-                alt="Avatar" 
-                />
+                alt="Avatar"
+            />
         </header>
     )
 }

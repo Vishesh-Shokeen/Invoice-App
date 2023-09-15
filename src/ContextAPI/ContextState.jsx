@@ -32,14 +32,13 @@ const state = (props) => {
                 name: '',
                 qty: 1,
                 price: 0,
-                total: 0
             },
 
             invoiceDate: '21 Aug 2021',
             paymentTerms: '',
             desc: '',
             status: '',
-            id: '121212'
+            id: '125478'
         }
     ]
 
