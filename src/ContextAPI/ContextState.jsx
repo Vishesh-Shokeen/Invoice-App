@@ -13,36 +13,232 @@ const state = (props) => {
 
         {
             BillFrom: {
-                street: '',
-                city: '',
-                postCode: '',
-                country: ''
+                street: '19 Union Terrace',
+                city: 'London',
+                postCode: 'E1 3EZ',
+                country: 'UK'
             },
     
             BillTo: {
-                name: '',
-                email: '',
-                street: '',
-                city: '',
-                postCode: '',
-                country: ''
+                name: 'Alex Grim',
+                email: 'alexgrim@gmail.com',
+                street: '84 Church Way',
+                city: 'Bradford',
+                postCode: 'Bd1 9Pb',
+                country: 'Uk'
             },
     
             Item: [
                 {
                     id: 0,
-                    name: '',
+                    name: 'Banner Design',
                     qty: 1,
-                    price: 0,
+                    price: 200,
+                },
+                {
+                    id: 0,
+                    name: 'Email Design',
+                    qty: 1,
+                    price: 600,
                 }
             ],
     
-            invoiceDate: '',
-            paymentTerms: 'Net 1 Day',
-            desc: '',
-            status: '',
-            id: ''
-        }    
+            invoiceDate: ' 2-4-23',
+            paymentTerms: 'Net 7 Day',
+            desc: 'Grapghic Design',
+            status: 'Paid',
+            id: '745866'
+        },    
+        {
+            BillFrom: {
+                street: '19 Union Terrace',
+                city: 'London',
+                postCode: 'E1 3EZ',
+                country: 'UK'
+            },
+    
+            BillTo: {
+                name: 'Alex Grim',
+                email: 'alexgrim@gmail.com',
+                street: '84 Church Way',
+                city: 'Bradford',
+                postCode: 'Bd1 9Pb',
+                country: 'Uk'
+            },
+    
+            Item: [
+                {
+                    id: 0,
+                    name: 'Banner Design',
+                    qty: 1,
+                    price: 200,
+                },
+                {
+                    id: 0,
+                    name: 'Email Design',
+                    qty: 1,
+                    price: 600,
+                }
+            ],
+    
+            invoiceDate: ' 2-4-23',
+            paymentTerms: 'Net 7 Day',
+            desc: 'Grapghic Design',
+            status: 'Paid',
+            id: '313947'
+        },    
+        {
+            BillFrom: {
+                street: '19 Union Terrace',
+                city: 'London',
+                postCode: 'E1 3EZ',
+                country: 'UK'
+            },
+    
+            BillTo: {
+                name: 'John Smith',
+                email: 'Johnsmith@gmail.com',
+                street: '84 Church Way',
+                city: 'Bradford',
+                postCode: 'Bd1 9Pb',
+                country: 'Uk'
+            },
+    
+            Item: [
+                {
+                    id: 0,
+                    name: 'Website Design',
+                    qty: 1,
+                    price: 5000,
+                },
+                {
+                    id: 0,
+                    name: 'Email Design',
+                    qty: 1,
+                    price: 600,
+                }
+            ],
+    
+            invoiceDate: ' 8-5-23',
+            paymentTerms: 'Net 7 Day',
+            desc: 'Design',
+            status: 'Paid',
+            id: '986569'
+        },    
+        {
+            BillFrom: {
+                street: '19 Union Terrace',
+                city: 'London',
+                postCode: 'E1 3EZ',
+                country: 'UK'
+            },
+    
+            BillTo: {
+                name: 'Anand Mukherjee',
+                email: 'anandmukherjee@gmail.com',
+                street: 'Churchgate',
+                city: 'kolkota',
+                postCode: '2655',
+                country: 'India'
+            },
+    
+            Item: [
+                {
+                    id: 0,
+                    name: 'Web Devoploment',
+                    qty: 1,
+                    price: 20000,
+                },
+                {
+                    id: 0,
+                    name: 'Graphic Design',
+                    qty: 1,
+                    price: 1000,
+                }
+            ],
+    
+            invoiceDate: ' 7-6-23',
+            paymentTerms: 'Net 7 Day',
+            desc: 'Development',
+            status: 'Paid',
+            id: '343983'
+        },    
+        {
+            BillFrom: {
+                street: '19 Union Terrace',
+                city: 'London',
+                postCode: 'E1 3EZ',
+                country: 'UK'
+            },
+    
+            BillTo: {
+                name: 'Alex Grim',
+                email: 'alexgrim@gmail.com',
+                street: '84 Church Way',
+                city: 'Bradford',
+                postCode: 'Bd1 9Pb',
+                country: 'Uk'
+            },
+    
+            Item: [
+                {
+                    id: 0,
+                    name: 'Banner Design',
+                    qty: 1,
+                    price: 200,
+                },
+                {
+                    id: 0,
+                    name: 'Email Design',
+                    qty: 1,
+                    price: 600,
+                }
+            ],
+    
+            invoiceDate: ' 2-4-23',
+            paymentTerms: 'Net 7 Day',
+            desc: 'Grapghic Design',
+            status: 'Paid',
+            id: '365995'
+        },    
+        {
+            BillFrom: {
+                street: '19 Union Terrace',
+                city: 'London',
+                postCode: 'E1 3EZ',
+                country: 'UK'
+            },
+    
+            BillTo: {
+                name: 'Alex Grim',
+                email: 'alexgrim@gmail.com',
+                street: '84 Church Way',
+                city: 'Bradford',
+                postCode: 'Bd1 9Pb',
+                country: 'Uk'
+            },
+    
+            Item: [
+                {
+                    id: 0,
+                    name: 'Banner Design',
+                    qty: 1,
+                    price: 200,
+                },
+                {
+                    id: 0,
+                    name: 'Email Design',
+                    qty: 1,
+                    price: 600,
+                }
+            ],
+    
+            invoiceDate: ' 2-4-23',
+            paymentTerms: 'Net 7 Day',
+            desc: 'Grapghic Design',
+            status: 'Paid',
+            id: '548641'
+        },    
     ]
 
 
