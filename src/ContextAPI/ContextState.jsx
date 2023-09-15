@@ -13,33 +13,36 @@ const state = (props) => {
 
         {
             BillFrom: {
-                street: '19 Union terrace',
-                city: 'London',
-                postCode: '2156',
-                country: 'United Kingdom'
+                street: '',
+                city: '',
+                postCode: '',
+                country: ''
             },
-
+    
             BillTo: {
-                name: 'Alex Grim',
-                email: '',
-                street: '84 Church Way',
-                city: 'Bradford',
-                postCode: '1651',
-                country: 'United Kingdom'
-            },
-
-            Item: {
                 name: '',
-                qty: 1,
-                price: 0,
+                email: '',
+                street: '',
+                city: '',
+                postCode: '',
+                country: ''
             },
-
-            invoiceDate: '21 Aug 2021',
-            paymentTerms: '',
+    
+            Item: [
+                {
+                    id: 0,
+                    name: '',
+                    qty: 1,
+                    price: 0,
+                }
+            ],
+    
+            invoiceDate: '',
+            paymentTerms: 'Net 1 Day',
             desc: '',
             status: '',
-            id: '125478'
-        }
+            id: ''
+        }    
     ]
 
 

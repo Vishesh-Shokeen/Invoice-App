@@ -37,13 +37,15 @@ export default function InvoiceBoard() {
         <span className={invoiceClient}>{invoice.BillTo.name}</span>
         <span className={invoiceDue}>{invoice.invoiceDate.split('-').reverse().join('-')}</span>
 
-        <span className={invoiceTotal}> &#x20B9; {invoice.Item.reduce((acc,x) => acc += x.price * x.qty , 0)}</span>
-        
+        <span className={invoiceTotal}> &#x20B9; {invoice.Item.reduce((acc, x) => acc += x.price * x.qty, 0)}</span>
+
         <Status
             status={invoice.status}
         />
     </Link>
     )
+
+
 
     function refreshBoard(e) {
         if (!e.target.value == '') {

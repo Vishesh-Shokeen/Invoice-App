@@ -14,7 +14,6 @@ export default function Skills({ invoice } = props) {
     </div>)
 
     const totalPrice = invoice.Item.reduce((acc , item) => acc  += item.price * item.qty,0)
-    console.log(totalPrice)
 
     return (
         <div
