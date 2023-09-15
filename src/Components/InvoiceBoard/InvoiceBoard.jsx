@@ -36,7 +36,7 @@ export default function InvoiceBoard() {
         <span className={invoiceID}>{invoice.id}</span>
         <span className={invoiceClient}>{invoice.BillTo.name}</span>
         <span className={invoiceDue}>{invoice.invoiceDate.split('-').reverse().join('-')}</span>
-        <span className={invoiceTotal}> &#x20B9; {invoice.Item.reduce((acc , item) => acc  += item.price * item.qty,0)}</span>
+        {/* <span className={invoiceTotal}> &#x20B9; {invoice.Item.reduce((acc , item) => acc  += item.price * item.qty,0)}</span> */}
         <Status
             status={invoice.status}
         />
